@@ -1,6 +1,5 @@
 LOCAL_PATH:= $(call my-dir)
-# HAL module implemenation stored in
-# hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
+
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := $(LOCAL_PATH)/lights.c
