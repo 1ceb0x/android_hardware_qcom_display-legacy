@@ -270,6 +270,7 @@ int mapFrameBufferLocked(struct private_module_t* module)
     info.yres_virtual = (size * numberOfBuffers) / line_length;
 
 #ifndef NO_HW_VSYNC
+#ifdef MSMFB_METADATA_SET
     struct msmfb_metadata metadata;
 
     metadata.op = metadata_op_base_blend;
@@ -278,6 +279,7 @@ int mapFrameBufferLocked(struct private_module_t* module)
     if(ioctl(fd, MSMFB_METADATA_SET, &metadata) == -1) {
         ALOGW("MSMFB_METADATA_SET failed to configure alpha mode");
     }
+#endif
 #endif
 
     uint32_t flags = PAGE_FLIP;

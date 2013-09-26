@@ -16,6 +16,6 @@ LOCAL_C_INCLUDES := \
 
 LOCAL_SHARED_LIBRARIES := $(common_libs) libGLESv2
 
-LOCAL_SRC_FILES        := tilerenderer.cpp
+LOCAL_SRC_FILES        := $(LOCAL_PATH)/tilerenderer.cpp
 include $(BUILD_SHARED_LIBRARY)
 endif
